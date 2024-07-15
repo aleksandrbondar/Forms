@@ -38,9 +38,9 @@ export const formConfig = (() => {
   return {
     initialValues: initialValues,
     validationSchema: validationSchema,
-    validateOnMount: true,
-    // validateOnChange: true,
-    // validateOnBlur: true,
+    validateOnMount: true, // валидация при монтировании
+    // validateOnChange: true,  // валидация при изменении значения (ввода)
+    // validateOnBlur: true, // валидация при потере фокуса
     onSubmit: handleFormSubmit,
   }
 })()

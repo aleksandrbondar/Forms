@@ -11,8 +11,8 @@ const InputField = ({ name, type, placeholder, label, touched, errors, warning, 
       <Field className="form-control" name={name}>
         {({ field, form }: FieldProps) => {
           const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-            form.setFieldTouched(name, true, false).catch((err) => console.log(err))
-            field.onChange(e)
+            form.setFieldTouched(name, true, false).catch((err) => console.log(err)) // изменяем флаг touched(нажимали на поле ввода) на true
+            field.onChange(e)  // продолжаем обработку изменений ввода
           }
           return (
             < input {...field}
