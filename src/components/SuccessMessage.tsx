@@ -1,12 +1,7 @@
-import { Field, FieldProps } from "formik"
-
-const SuccessMessage = ({ name, isBlur }: { name: string, isBlur: boolean }) => {
+/* eslint-disable @typescript-eslint/no-unused-vars */
+const SuccessMessage = ({ message }: { message: string }) => {
   return (
-    <Field name={name}>
-      {({ form: { touched, errors } }: FieldProps) =>
-        !errors[name] && (touched[name] || isBlur) ? <div className="valid-feedback">Good Job!</div> : null
-      }
-    </Field>
+    <div className="valid-feedback">{message}</div>
   )
 }
 

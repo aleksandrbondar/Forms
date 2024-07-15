@@ -1,7 +1,17 @@
 import * as Yup from "yup"
 import { FormValuesInterface } from "../types/FormInterfaces"
+import { handleFormSubmit } from "../helpers/formHelpers"
+
 
 export const initialValues: FormValuesInterface = { username: '', password: '', confirmPassword: '', email: '' }
+
+export const inputProps = new Map([
+  ["username", { type: "text", placeholder: "Enter your Name", label: "User Name", warning: "Must be 3 characters or more", success: "Success", error: "Name Required" }],
+  ["password", { type: "password", placeholder: "Enter your password", label: "Password", warning: "Must be 8 characters or more with 1 uppercase, 1 lowercase letter, 1 number and 1 special character", success: "Success", error: "Password Required" }],
+  ["confirmPassword", { type: "password", placeholder: "Enter your password", label: "Confirm Password", warning: "Passwords must match", success: "Success", error: "Password Confirm Required" }],
+  ["email", { type: "email", placeholder: "Enter your email", label: "Email", warning: "Invalid email address", success: "Success", error: "Email Required" }],
+]
+)
 
 export const validationSchema = Yup.object().shape({
   username: Yup.string()
@@ -23,3 +33,14 @@ export const validationSchema = Yup.object().shape({
     .required("Email Required")
     .email("Invalid email address")
 })
+
+export const formConfig = (() => {
+  return {
+    initialValues: initialValues,
+    validationSchema: validationSchema,
+    validateOnMount: true,
+    // validateOnChange: true,
+    // validateOnBlur: true,
+    onSubmit: handleFormSubmit,
+  }
+})()

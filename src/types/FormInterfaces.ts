@@ -16,4 +16,6 @@ export interface InputFieldProps {
   label: string
   touched: FormikFieldState
   errors: FormikFieldState
+  warning: string
+  success: string
 }
