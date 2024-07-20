@@ -14,7 +14,7 @@ const Datepicker = (inputProps: DatePropsInterface) => {
           const { setFieldValue } = form
           const { value } = field
           function dateHandleChange(date: Date | null) {
-            setFieldValue(name, date)
+            setFieldValue(name, date?.toISOString().split('T')[0])
             form.setFieldTouched(name, true, false).catch((err) => console.log(err))
           }
           return (
