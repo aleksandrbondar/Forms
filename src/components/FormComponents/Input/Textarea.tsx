@@ -28,7 +28,7 @@ const Textarea = (inputProps: TextAreaPropsInterface) => {
               onChange={(e) => handleChange(e, form, field, name)}
               onBlur={() => setFieldState({ isFocus: false, isBlur: true })}
               onFocus={() => setFieldState({ ...fieldState, isFocus: true })}
-              className={`form-control ${inputStyleValidation}`} />
+              className={`form-control resize-none ${inputStyleValidation}`} />
           )
         }}
       </Field>

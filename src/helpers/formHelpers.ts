@@ -1,7 +1,7 @@
 import { FormikHelpers } from "formik"
 import { GetStylePropsInterface } from "../types/FormInterfaces"
 import { ChangeEvent } from "react"
-import { FormValuesInterface } from "../config/FormConfig";
+import { FormValuesInterface } from "../formConfig/FormConfig";
 
 export function getMessageType({ touched, errors, fieldState }: GetStylePropsInterface): string {
   const { isBlur, isFocus } = fieldState;
@@ -15,7 +15,6 @@ export function getMessageType({ touched, errors, fieldState }: GetStylePropsInt
 
   return 'valid';
 }
-
 
 export function getInputStyle({ touched, errors, fieldState }: GetStylePropsInterface): string {
   const { isBlur, isFocus } = fieldState;

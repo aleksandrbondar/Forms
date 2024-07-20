@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Form, Formik } from "formik"
 import { Button } from "react-bootstrap"
-import { formConfig, FormValuesInterface, inputProps } from "../config/FormConfig"
+import { formConfig, FormValuesInterface, inputProps } from "../formConfig/FormConfig"
 import FormField from "./FormField"
 
 const RegistrationForm = () => {
@@ -9,7 +9,7 @@ const RegistrationForm = () => {
     <Formik {...formConfig}>
       {({ isValid, isSubmitting, errors, touched }) => {
         return (
-          <Form className={`mb-3 p-3 ${(isValid || isSubmitting) ? '' : 'border border-warning rounded'}`} autoComplete="off">
+          <Form className={`mb-3 p-3 rounded border ${(isValid || isSubmitting) ? 'border-green-500' : 'border-warning'}`} autoComplete="off">
             {Array.from(inputProps.entries()).map(([name, props]) => {
               const inputProps = {
                 ...props,

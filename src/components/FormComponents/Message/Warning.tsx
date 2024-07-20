@@ -1,7 +1,7 @@
 
 const Warning = ({ warning }: { warning?: string }) => {
   return (
-    <div className="text-warning d-block" >{warning}</div>
+    <div className="message text-warning d-block" >{warning}</div>
   )
 }
 

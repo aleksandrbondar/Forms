@@ -4,14 +4,6 @@ import { SelectInterface } from "../types/FormInterfaces"
 import { FormikTouched } from "formik"
 
 export interface FormValuesInterface {
-  username: string
-  password: string
-  confirmPassword: string
-  email: string
-  textarea: string,
-  checkbox: number | boolean | FormikTouched<SelectInterface>[] | undefined,
-  select: string | number | undefined,
-  radio: string | number | undefined,
   [key: string]: string | string[] | object | number | boolean | FormikTouched<SelectInterface>[] | undefined | null
 }
 

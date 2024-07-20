@@ -12,7 +12,7 @@ interface InputMessageInterface {
 const InputMessage = ({ validation, warning, success, name }: InputMessageInterface) => {
   switch (validation) {
     case 'invalid':
-      return <ErrorMessage name={name} component="div" className="invalid-feedback" />
+      return <ErrorMessage name={name} component="div" className="message invalid-feedback" />
     case 'warning':
       return <Warning warning={warning} />
     case 'valid':
