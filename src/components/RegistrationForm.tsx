@@ -9,7 +9,7 @@ const RegistrationForm = () => {
     <Formik {...formConfig}>
       {({ isValid, isSubmitting, errors, touched }) => {
         return (
-          <Form className={`mb-3 p-3 rounded border ${(isValid || isSubmitting) ? 'border-green-500' : 'border-warning'}`} autoComplete="off">
+          <Form className={`mb-3 p-3 rounded border ${(isValid || isSubmitting) ? ' border-success' : 'border-warning'}`} autoComplete="off">
             {Array.from(inputProps.entries()).map(([name, props]) => {
               const inputProps = {
                 ...props,

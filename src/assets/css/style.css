@@ -20,3 +20,7 @@ a {
 li {
   list-style: none;
 }
+
+.border-success {
+  border-color: rgb(30, 182, 0);
+}
